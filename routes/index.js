@@ -5,7 +5,7 @@ const Url = require('../models/url');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('pages/home',{title: 'Shrts'});
+    res.render('pages/home',{title: 'Srt-lnk'});
 });
 
 router.get('/:shortCode', async (req, res, next) => {
@@ -21,7 +21,7 @@ router.get('/:shortCode', async (req, res, next) => {
     if(url)
       res.redirect(url.longUrl);
     else {
-      res.render('pages/error',{title: 'Shrts | Page Not Found'});
+      res.render('pages/error',{title: 'Srt-lnk | Page Not Found'});
     }
     },(err) => next(err))  
   .catch((err) => next(err));

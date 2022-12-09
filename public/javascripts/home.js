@@ -50,7 +50,7 @@ $(document).ready(function(){
                 return 0;
             }
             if(isUrlShortened(longUrl)) {
-                $('#status').html("srt-lnk.herokuapp.com/ URL can't be Shortened").removeClass('hide');
+                $('#status').html("srt-lnk.cyclic.app/ URL can't be Shortened").removeClass('hide');
                 return 0;
             }
             if(checkForValidAlias(alias)) {
@@ -79,7 +79,7 @@ $(document).ready(function(){
 }
 
 function isUrlShortened(url) {
-    if (url.indexOf("https://srt-lnk.herokuapp.com") !== -1 || url.indexOf("http://srt-lnk.herokuapp.com") !== -1 || url.indexOf("shrts.herokuapp.com") !== -1) {
+    if (url.indexOf("https://srt-lnk.cyclic.app") !== -1 || url.indexOf("http://srt-lnk.cyclic.app") !== -1 || url.indexOf("shrts.herokuapp.com") !== -1) {
         return true;
     }
     return false;
@@ -106,7 +106,7 @@ function urlShorten(longUrl, alias) {
     }
     var xhr = $.ajax({
 		type: 'POST',
-    	url: 'https://srt-lnk.herokuapp.com/api/url/',
+    	url: 'https://srt-lnk.cyclic.app/api/url/',
 		data: data,
 		error: function (err) {
             clearTimeout(t);
